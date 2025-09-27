@@ -1,22 +1,38 @@
 from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
-
-import google.generativeai as genai
+from openai import OpenAI
 import os
 
-api_key = os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-2.5-flash')
+api_key = os.environ.get("GOOGLE_API_KEY")
+
+client = OpenAI(
+    api_key=api_key,
+    base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+    
+)
 
 app = FastAPI()
 
 @app.get("/api", response_class = PlainTextResponse)
 def idea():
     try:
-        messages = [{"role": "user", "content": "Come up with a new business idea for AI agents. keep message short"}]
-        response = model.generate_content("Come up with a new business idea for AI agents. keep message short")
-        print(response.text)
-        return response.text
+        messages = [
+                {
+                    "role": "system", "content": "You are a helpful assistant",
+                    "role": "user", "content": "Come up with a new business idea for AI agents. keep message short"
+                }
+            ]
+        response = client.chat.completions.create(
+        model="gemini-2.5-flash",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {
+                "role": "user",
+                "content": "Explain to me how AI works"
+            }
+        ]
+    )
+        return response.choices[0].message.content
     except Exception as e:
-        print("exception", e)
-        return e
+        print("exception", str(e))
+        return str(e)
