@@ -1,0 +1,22 @@
+{
+  "full_name": "Ayush Shekhar",
+  "name": "Ayush",
+  "current_role": "Research Intern at NECLABS Europe",
+  "location": "Germany",
+  "email": "iamayushshekhar@gmail.com",
+  "linkedin": "linkedin.com/in/georgianayush",
+  "specialties": [
+    "AI engineering",
+    "Full stack developer",
+    "Front End",
+    "AI Research"
+  ],
+  "years_experience": 5,
+  "education": [
+    {
+      "degree": "MSc. Informatik",
+      "institution": "TU Kaiserslautern",
+      "year": "2025"
+    }
+  ]
+}

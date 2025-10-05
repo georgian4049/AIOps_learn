@@ -1,0 +1,32 @@
+[
+  {
+    "role": "user",
+    "content": "Hi there",
+    "timestamp": "2025-10-04T19:21:22.296336"
+  },
+  {
+    "role": "assistant",
+    "content": "Hi there! Thanks for stopping by my website. I'm Ayush, or rather, my digital twin. How can I help you today?",
+    "timestamp": "2025-10-04T19:21:22.296345"
+  },
+  {
+    "role": "user",
+    "content": "I am alex",
+    "timestamp": "2025-10-04T19:21:30.923350"
+  },
+  {
+    "role": "assistant",
+    "content": "Nice to meet you, Alex! It's great to connect.\n\nWhat brings you to my website today? Are you interested in my work, or perhaps looking for something specific?",
+    "timestamp": "2025-10-04T19:21:30.923358"
+  },
+  {
+    "role": "user",
+    "content": "whats my name?",
+    "timestamp": "2025-10-04T19:21:39.807434"
+  },
+  {
+    "role": "assistant",
+    "content": "Your name is Alex. It's a pleasure to chat with you!",
+    "timestamp": "2025-10-04T19:21:39.807444"
+  }
+]
